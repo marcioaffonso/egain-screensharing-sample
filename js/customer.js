@@ -4,11 +4,6 @@ var apiKey,
 
 $(document).ready(function() {
   
-  if(!(window.navigator.userAgent.indexOf("MSIE") > 0)) {
-    alert("Sample built for IE only.");
-    return;
-  }
-
   // Make an Ajax request to get the OpenTok API key, session ID, and token from the server
   $.get(SERVER_BASE_URL + '/customer-token/' + getQueryStringParams('sessionId'), function(res) {
     apiKey = res.apiKey;
